@@ -1,11 +1,3 @@
-% This Matlab file demomstrates the method for simultaneous segmentation and bias field correction
-% in Chunming Li et al's paper:
-%    "Multiplicative intrinsic component optimization (MICO) for MRI bias field estimation and tissue segmentation",
-%     Magnetic Resonance Imaging, vol. 32 (7), pp. 913-923, 2014
-% Author: Chunming Li, all rights reserved
-% E-mail: li_chunming@hotmail.com
-% URL:  http://imagecomputing.org/~cmli/
-
 clc;
 close all;
 clear all;
@@ -68,7 +60,6 @@ for i = 1:length(rfs)
                 file = info{l};
                 if str2num(file.rf) == rf_temp && str2num(file.it) == it_temp && str2num(file.q) == q_temp
                    data(:, k) = file.ssd;
-%                    display(strcat('file', num2str(it_temp), num2str(rf_temp)));
                 end
             end
         end
